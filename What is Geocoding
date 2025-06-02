@@ -1,0 +1,47 @@
+Let me create a comprehensive guide about geocoding, including both forward and reverse operations, along with practical implementation details.
+
+Understanding Geocoding
+Geocoding is the process of converting geographic information between two formats 
+
+Forward Geocoding: Converting addresses into latitude/longitude coordinates
+Reverse Geocoding: Converting latitude/longitude coordinates into human-readable addresses
+
+          +---------+                       
+          | Client  |
+          +---------+
+               |
+               |  Forward Geocoding
+               |------------------------------------>
+               | GET /geocode/search?text=address
+               |     &apiKey=key
+               |
+               |<------------------------------------
+               | Response:
+               | { "lat": 37.4223406, 
+               |   "lon": -122.0855602 }
+
+               |
+               |  Reverse Geocoding
+               |------------------------------------>
+               | GET /geocode/search?lat=37.4223406
+               |     &lon=-122.0855602&apiKey=key
+               |
+               |<------------------------------------
+               | Response:
+               | { "formatted": 
+               |   "1600 Amphitheatre Parkway,
+               |    Mountain View, CA 94043" }
+
+               |
+               |  Error Handling
+               |------------------------------------>
+               | Invalid Request
+               |
+               |<------------------------------------
+               | Error:
+               | { "status": "ERROR", 
+               |   "message": "Invalid API key" }
+
+          +----------------+
+          | Geoapify API   |
+          +----------------+
