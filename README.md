@@ -2,7 +2,8 @@
 
 Let me create a comprehensive guide about geocoding, including both forward and reverse operations, along with practical implementation details.
 
-Understanding Geocoding
+Understanding Geocoding :
+
 Geocoding is the process of converting geographic information between two formats 
 
 Forward Geocoding: Converting addresses into latitude/longitude coordinates
